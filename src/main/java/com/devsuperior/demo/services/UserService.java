@@ -32,7 +32,7 @@ public class UserService implements UserDetailsService {
         for(UserDetailsProjection projection:result){
             user.addRole(new Role(projection.getRoleId(), projection.getAuthority()));
         }
-        // Why use this solution? To avoid issues related to JPA Lazy Loading
+        // Why use this solution? To avoid issues related to JPA Lazy Loadings
         return user;
     }
 }
